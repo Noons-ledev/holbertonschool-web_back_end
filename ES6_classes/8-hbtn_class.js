@@ -3,7 +3,7 @@ export default class HolbertonClass {
     if (typeof size !== 'number') {
       throw TypeError('size must be number typed');
     }
-    if (!(location instanceof String)) {
+    if (typeof location !== 'string') {
       throw TypeError('location must be string typed');
     }
     this._size = size;
@@ -26,7 +26,7 @@ export default class HolbertonClass {
   }
 
   set location(value) {
-    if (!(value instanceof String)) {
+    if (typeof value !== 'string') {
       throw TypeError('location must be a string!');
     }
     this._location = value;
