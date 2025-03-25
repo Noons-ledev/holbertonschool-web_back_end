@@ -14,15 +14,15 @@ export default class HolbertonClass {
     return this._size;
   }
 
-  get location() {
-    return this._location;
-  }
-
   set size(value) {
     if (typeof value !== 'number') {
       throw TypeError('size must be a number!');
     }
     this._size = value;
+  }
+
+  get location() {
+    return this._location;
   }
 
   set location(value) {
@@ -33,7 +33,7 @@ export default class HolbertonClass {
   }
 
   toString() {
-    return this._location;
+    return String(this._location);
   }
 
   valueOf() {
