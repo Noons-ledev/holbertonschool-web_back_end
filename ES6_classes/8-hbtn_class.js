@@ -37,6 +37,6 @@ export default class HolbertonClass {
   }
 
   valueOf() {
-    return this._size;
+    return Number(this._size);
   }
 }
