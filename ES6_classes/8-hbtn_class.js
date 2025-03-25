@@ -1,5 +1,11 @@
 export default class HolbertonClass {
   constructor(size, location) {
+    if (typeof size !== 'number') {
+      throw TypeError('size must be number typed');
+    }
+    if (!(location instanceof String)) {
+      throw TypeError('location must be string typed');
+    }
     this._size = size;
     this._location = location;
   }
