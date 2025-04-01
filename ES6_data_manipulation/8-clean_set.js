@@ -14,7 +14,6 @@ export default function cleanSet(set, startString) {
       MyString += value.replace(startString, '');
       MyString += '-';
     }
-    return MyString;
   });
   MyString = MyString.slice(0, -1);
   return MyString;
