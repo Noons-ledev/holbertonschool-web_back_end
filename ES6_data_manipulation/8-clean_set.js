@@ -3,7 +3,7 @@ export default function cleanSet(set, startString) {
     throw TypeError('set must be a Set');
   }
   if (typeof startString !== 'string') {
-    throw TypeError('startString must be a string');
+    return '';
   }
   if (startString.length === 0) {
     return '';
