@@ -8,7 +8,7 @@ export default function createInt8TypedArray(length, position, value) {
   if (typeof position !== 'number') {
     throw TypeError('position must be a number');
   }
-  if (!(position >= 0 || position < length)) {
+  if (!(position >= 0 && position < length)) {
     throw Error('Position outside range');
   }
   let array = new ArrayBuffer(length);
