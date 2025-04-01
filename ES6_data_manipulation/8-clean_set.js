@@ -8,13 +8,7 @@ export default function cleanSet(set, startString) {
   if (startString.length === 0) {
     return '';
   }
-  let MyString = '';
-  set.forEach((value) => {
-    if (value.startsWith(startString)) {
-      MyString += value.replace(startString, '');
-      MyString += '-';
-    }
-  });
-  MyString = MyString.slice(0, -1);
-  return MyString;
+  return [...set].filter((value) => value.startsWith(startString))
+    .map((value) => value.replace(startString, ''))
+    .join('-');
 }
