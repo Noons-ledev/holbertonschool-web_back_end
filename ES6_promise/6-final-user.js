@@ -1,11 +1,13 @@
 // eslint-disable-next-line
-import printf from "./4-user-promise.js";
+import createUser from "./4-user-promise.js";
 // eslint-disable-next-line
-import uploadPhoto from "./5-photo-reject";
-export default function handleProfileSignup(firstName, lastName, filename) {
-  return Promise.allSettled([printf(firstName, lastName), uploadPhoto(filename)])
+import uploadPhoto from "./5-photo-reject.js";
+
+export default function handleProfileSignup(firstName, lastName, fileName) {
+  return Promise.allSettled([createUser(firstName, lastName), uploadPhoto(fileName)])
     .then((results) => results.map((result) => ({
       status: result.status,
-      value: result.status === 'fullfilled' ? result.value : result.reason.toString(),
-    })));
+      value: result.status === 'fulfilled' ? result.value : result.reason.toString(),
+    }
+    )));
 }
