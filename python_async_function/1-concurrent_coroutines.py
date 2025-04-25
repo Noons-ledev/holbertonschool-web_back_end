@@ -1,9 +1,7 @@
-"""0-basic_async_syntax.py"""
-
 import asyncio
 import random
 from typing import List
-
+"""Doc comes here"""
 wait_random = __import__('0-basic_async_syntax').wait_random
 
 
