@@ -7,7 +7,7 @@ import math
 from typing import List
 
 
-def index_range(page, page_size):
+def index_range(page, page_size) -> tuple:
     """Function doc in here"""
     if page == 1:
         return (0, page_size)
