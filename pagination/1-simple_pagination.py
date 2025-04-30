@@ -4,10 +4,10 @@ Module doc here
 """
 import csv
 import math
-from typing import List
+from typing import List, Tuple
 
 
-def index_range(page, page_size) -> tuple:
+def index_range(page, page_size) -> Tuple[int, int]:
     """Function doc in here"""
     if page == 1:
         return (0, page_size)
