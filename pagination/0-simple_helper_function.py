@@ -10,5 +10,3 @@ def index_range(page, page_size):
         return (0, page_size)
     if page != 0:
         return ((page_size * (page - 1)), page * page_size)
-
-    
