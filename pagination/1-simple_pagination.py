@@ -9,10 +9,9 @@ from typing import List, Tuple
 
 def index_range(page, page_size) -> Tuple[int, int]:
     """Function doc in here"""
-    if page == 1:
-        return (0, page_size)
-    if page != 0:
-        return ((page_size * (page - 1)), page * page_size)
+    start: int = (page - 1) * page_size
+    end: int = start + page_size
+    return (start, end)
 
 
 class Server:
