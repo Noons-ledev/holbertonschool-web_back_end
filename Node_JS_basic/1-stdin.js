@@ -4,7 +4,6 @@ process.stdin.on('data', (data) => {
   const name = data.trim();
   console.log(`Your name is: ${name}`);
   process.stdin.pause();
-  process.exit();
 });
 
 process.stdin.on('end', () => {
