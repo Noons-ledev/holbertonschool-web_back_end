@@ -4,6 +4,9 @@ process.stdin.on('data', (data) => {
   const name = data.trim();
   console.log(`Your name is: ${name}`);
   process.stdin.pause();
+  if (process.stdin.isTTY) {
+    process.exit(0);
+  }
 });
 
 process.stdin.on('end', () => {
